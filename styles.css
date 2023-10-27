@@ -220,6 +220,9 @@ NAVIGATION
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+.nav li:first-child {
+    font-variant: small-caps;
+}
 
 
 /*
@@ -368,14 +371,14 @@ MEDIA QEURIES
 
 
 
+    .nav li:not(:first-child) {
+        text-transform: uppercase;
+    }
     .header li {
         float: left;
     }
     .header li a {
-        padding: 20px 30px;
-    }
-    .header img {
-        visibility: hidden;
+        padding: 20px;
     }
     .header .menu {
         clear: none;
