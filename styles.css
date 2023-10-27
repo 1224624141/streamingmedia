@@ -1,0 +1,398 @@
+/* 
+Blue 6 darkest - #020659
+Blue 5 - #020873
+Blue 4 - #030ABC
+Blue 3 - #2104D9
+Blue 2 - #0D8DFB
+Blue 1 Lightest - #2699FB
+Maroon - #590242
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+html {
+    background-color: #020659;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+/*
+SCROLL BARS
+*/
+#trending ::-webkit-scrollbar {
+width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#personal ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+width: 15px;
+}
+#personal ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#personal ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+background: #020659;
+border-radius: 5px;
+}
+#personal ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+background: #ffffff;
+}
+
+
+/*
+AUDIO
+*/
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+background-color: #ffffff;
+border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+background-color: rgba(255, 255, 255, .5);
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+
+/*
+TEXT AND BUTTON
+*/
+h1 {
+    font-size: 1.25em;
+}
+h2, h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+h2 {
+    color: #590242;
+    margin: 20px 0px 20px 40px;
+    font-weight: bold;
+}
+h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#trending h3 {
+    font-weight: bold;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+footer p {
+    font-size: .75em;
+}
+dl {
+    display: flex;
+}
+dt {
+    padding-right: 5px;
+    font-style: italic;
+}
+a:visited {
+    color: #ffffff;
+}
+button {
+    display: block;
+    background-color: #590242;
+    color: #ffffff;
+    margin: 25px 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+button:hover {
+    background-color: #020659;
+}
+
+
+/*
+HEADER
+*/
+header {
+    background-color: #020873;
+}
+.nav {
+    background-color: #020873;
+    color: #ffffff;
+    width: 100%;
+}
+header h1, header p {
+    position: relative;
+    top: 50px;
+    padding: 10px 25px;
+    background-image: linear-gradient(to right, #2104D9, black);
+    color: #ffffff;
+}
+
+/*
+NAVIGATION
+*/
+.nav h2 {
+    visibility: hidden;
+}
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.nav li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+.nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+
+/*
+ICON
+*/
+.nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    top: -145px;
+}
+.nav .menu-icon .navicon {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+.nav .menu-icon .navicon:before, .nav .menu-icon .navicon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.nav .menu-icon .navicon:before {
+    top: 5px;
+}
+.nav .menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+/*
+HAMBURGER
+*/
+.nav .menu-btn {
+    display: none;
+}
+.nav .menu-btn:checked ~ .menu {
+    max-height: 500px;
+}
+.nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+/*
+SCROLL
+*/
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    color: #590242;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+
+/*
+PERSONAL AND CURATED
+*/
+#trending, #personal, #curated {
+    margin: 50px 0px;
+}
+#personal .scroll {
+    background-color: #2699FB;
+    color: #ffffff;
+}
+#personal section {
+    background-color: #0D8DFB;
+    padding: 15px;
+    text-align: center;
+}
+#curated .scroll {
+    background-color: #030ABC;
+    color: #ffffff;
+}
+#curated section {
+    background-color: #020873;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/*
+FOOTER
+*/
+footer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+footer p {
+    background-color: transparent;
+    color: #590242;
+}
+
+/*
+MEDIA QEURIES
+*/
+@media screen and (min-width: 834px) {
+    body {
+        width: 834px;
+    }
+    
+    #personal, #curated {
+        width: 50%;
+        float: left;
+    }
+    #personal .scroll, #curated .scroll {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    #personal img, #curated img {
+        float: left;
+    }
+
+
+
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header img {
+        visibility: hidden;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        position: relative;
+        top: -150px;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    #trending button {
+        position: relative;
+        left: 600px;
+    }
+    #personal button, #curated button {
+        position: relative;
+        left: 220px;
+    }
+}
