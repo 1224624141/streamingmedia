@@ -184,6 +184,7 @@ HEADER
 */
 header {
     background-color: #020873;
+    max-height: 200px;
 }
 .nav {
     background-color: #020873;
@@ -203,6 +204,8 @@ NAVIGATION
 */
 .nav h2 {
     visibility: hidden;
+    max-height: 0px;
+    margin: 0px;
 }
 .nav ul {
     margin: 0;
@@ -222,6 +225,7 @@ NAVIGATION
 }
 .nav li:first-child {
     font-variant: small-caps;
+    font-weight: bold;
 }
 
 
@@ -360,22 +364,35 @@ MEDIA QEURIES
         width: 50%;
         float: left;
     }
+    #personal h3, #curated h3 {
+        font-weight: bold;
+    }
+    #personal section, #curated section {
+        padding-top: 10px;
+        height: 110px;
+    }
     #personal .scroll, #curated .scroll {
         display: block;
         overflow-x: hidden;
         overflow-y: auto;
+        max-height: 500px;
+
     }
     #personal img, #curated img {
         float: left;
+        padding-right: 5px;
     }
 
 
-
+    
     .nav li:not(:first-child) {
         text-transform: uppercase;
     }
     .header li {
         float: left;
+    }
+    .header li:hover {
+        background-color: #590242;
     }
     .header li a {
         padding: 20px;
@@ -385,10 +402,18 @@ MEDIA QEURIES
         float: right;
         max-height: none;
         position: relative;
-        top: -150px;
+        top: -95px;
+    }
+    .header .menu img {
+        position: relative;
+        top: -10px;
     }
     .header .menu-icon {
         display: none;
+    }
+    #trending h2 {
+        width: 100%;
+        padding-top: 20px;
     }
     #trending button {
         position: relative;
