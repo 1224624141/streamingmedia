@@ -184,19 +184,28 @@ HEADER
 */
 header {
     background-color: #020873;
-    max-height: 200px;
+    height: 200px;
 }
 .nav {
     background-color: #020873;
     color: #ffffff;
-    width: 100%;
+    width: 375px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 header h1, header p {
     position: relative;
     top: 50px;
-    padding: 10px 25px;
+    padding: 10px 40px;
     background-image: linear-gradient(to right, #2104D9, black);
     color: #ffffff;
+}
+header h1 {
+    padding-top: 20px;
+}
+header p {
+    padding-bottom: 20px;
 }
 
 /*
@@ -226,6 +235,9 @@ NAVIGATION
 .nav li:first-child {
     font-variant: small-caps;
     font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 100px;
 }
 
 
@@ -238,7 +250,7 @@ ICON
     padding: 28px 20px;
     position: relative;
     user-select: none;
-    top: -145px;
+    top: 0px;
 }
 .nav .menu-icon .navicon {
     background-color: #ffffff;
@@ -359,7 +371,9 @@ MEDIA QEURIES
     body {
         width: 834px;
     }
-    
+    #trending {
+        padding-top: 50px;
+    }
     #personal, #curated {
         width: 50%;
         float: left;
@@ -383,13 +397,24 @@ MEDIA QEURIES
         padding-right: 5px;
     }
 
-
-    
+    .header {
+        height: 100px;
+    }
+    .nav {
+        display: inline;
+        position: relative;
+        top: -20px;
+    }
+    .nav li:first-child {
+        position: relative;
+        left: 0px;
+    }
     .nav li:not(:first-child) {
         text-transform: uppercase;
     }
     .header li {
         float: left;
+        height: 50px;
     }
     .header li:hover {
         background-color: #590242;
